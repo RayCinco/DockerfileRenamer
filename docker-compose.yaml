@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  renamer:
+    hostname: renamer
+    container_name: renamer
+    build:
+      context: .
+      dockerfile: renamer.Dockerfile
+    ports:
+      - "8000:80"
+    tty: true
+    stdin_open: true
+    volumes:
+    - C:/Users/RCLappy/Desktop/Renamescript:/app
